@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 public class OrangeWeb {
@@ -14,10 +15,11 @@ public class OrangeWeb {
 
         WebDriver driver= new FirefoxDriver();
         driver.get ("https://opensource-demo.orangehrmlive.com/");
+//deprecated code
+        //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(100));
 
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        System.out.println(driver.findElement(By.id("logInPanelHeading")).getText().trim());
-//Testcase one
+      //Testcase one
         //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         //System.out.println(driver.findElement(By.id("logInPanelHeading")).getText().trim());
 
