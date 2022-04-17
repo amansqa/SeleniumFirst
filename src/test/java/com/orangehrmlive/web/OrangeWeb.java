@@ -17,6 +17,15 @@ public class OrangeWeb {
 
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         System.out.println(driver.findElement(By.id("logInPanelHeading")).getText().trim());
+//Testcase one
+        //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        //System.out.println(driver.findElement(By.id("logInPanelHeading")).getText().trim());
+
+//Login testcase
+       driver.findElement(By.id("txtUsername")).sendKeys("Admin");
+       driver.findElement(By.id("txtPassword")).sendKeys("admin123");
+       driver.findElement(By.className("button")).click();;
+
 
         driver.quit();
 
